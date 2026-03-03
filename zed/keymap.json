@@ -1,0 +1,16 @@
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space c s": "theme_selector::Toggle",
+      "ctrl-/": "terminal_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-/": "terminal_panel::ToggleFocus",
+    },
+  },
+]

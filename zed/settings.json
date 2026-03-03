@@ -1,0 +1,55 @@
+{
+  "redact_private_values": true,
+  "scrollbar": {
+    "show": "never",
+  },
+  "use_system_path_prompts": false,
+  "use_system_prompts": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "python": true,
+    "python-snippets": true,
+    "go-snippets": true,
+    "lua": true,
+    "javascript": true,
+    "javascript-snippets": true,
+    "html": true,
+    "html-snippets": true,
+    "toml": true,
+    "yaml": true,
+    "dockerfile": true,
+    "github-actions": true,
+    "nix": true,
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 13,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "icon_theme": "Catppuccin Frappé",
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé",
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+  },
+  "status_bar": {
+    "experimental.show": true,
+  },
+  "agent": {
+    "enabled": false,
+  },
+  "edit_predictions": {
+    "provider": "none",
+  },
+}
