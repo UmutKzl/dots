@@ -1,0 +1,10 @@
+(provide 'opts)
+
+(setq make-backup-files nil)
+(setq term-termcap-mode t)
+(setq auto-save-default nil)
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message "Welcome to GNU Emacs!")
+(xterm-mouse-mode 1)
+(global-display-line-numbers-mode 1)
+(menu-bar-mode -1)
