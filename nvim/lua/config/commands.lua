@@ -1,3 +1,4 @@
+-- MasonInstallHere {{{
 vim.api.nvim_create_user_command("MasonInstallHere", function()
 	local ft = vim.bo.filetype
 
@@ -24,3 +25,4 @@ vim.api.nvim_create_user_command("MasonInstallHere", function()
 		print("There is no LSP for this file in this command. You should do it with MasonInstall manually.")
 	end
 end, {})
+-- }}}
