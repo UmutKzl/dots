@@ -15,4 +15,13 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = {},
+		lazy = false,
+		build = ":TSUpdate",
+		config = function()
+			require("nvim-treesitter").install({ "lua" }) -- you can install others by :TSInstall command
+		end,
+	},
 }
