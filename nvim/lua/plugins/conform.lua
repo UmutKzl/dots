@@ -1,18 +1,16 @@
-return {
-	{
-		"stevearc/conform.nvim",
-		opts = {},
-		config = function()
-			require("conform").setup({
-				formatters_by_ft = {
-					lua = { "stylua" },
-					python = { "black" },
-				},
-				format_on_save = {
-					lsp_format = "fallback",
-					timeout_ms = 500,
-				},
-			})
-		end,
+vim.pack.add({
+	"https://github.com/stevearc/conform.nvim",
+})
+
+require("conform").setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		python = { "isort", "black" },
+		rust = { "rustfmt", lsp_format = "fallback" },
+		javascript = { "prettierd", "prettier", stop_after_first = true },
 	},
-}
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_format = "fallback",
+	},
+})

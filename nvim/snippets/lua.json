@@ -1,8 +1,0 @@
-{
-  "map": {
-    "prefix": "map",
-    "body": [
-      "vim.keymap.set('n', '<leader>', '', {desc = 'Wohooo', silent = true})"
-    ]
-  }
-}

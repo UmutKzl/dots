@@ -1,27 +1,14 @@
-return {
-	{
-		"neovim/nvim-lspconfig",
-	},
-	{
-		"mason-org/mason.nvim",
-		opts = {},
-	},
-	{
-		"mason-org/mason-lspconfig.nvim",
-		opts = {},
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" }, -- you can install others by :Mason command
-			})
-		end,
-	},
-	{
-		"nvim-treesitter/nvim-treesitter",
-		opts = {},
-		lazy = false,
-		build = ":TSUpdate",
-		config = function()
-			require("nvim-treesitter").install({ "lua" }) -- you can install others by :TSInstall command
-		end,
-	},
-}
+vim.pack.add({
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/mason-org/mason.nvim",
+	"https://github.com/mason-org/mason-lspconfig.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+})
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = { "lua_ls" },
+})
+
+require("nvim-treesitter").setup()
+require("nvim-treesitter").install({ "lua" })
