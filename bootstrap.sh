@@ -96,3 +96,10 @@ ln -sf ~/dots/zellij/config.kdl ~/.config/zellij/config.kdl
 mkdir -p ~/.config/zed
 ln -sf ~/dots/zed/* ~/.config/zed/
 
+
+
+echo "Installation ended."
+
+echo "TODO"
+echo "Don't forget to disable SIP https://github.com/asmvik/yabai/wiki/Disabling-System-Integrity-Protection"
+echo "Don't forget to configure scripting addition https://github.com/asmvik/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition"
