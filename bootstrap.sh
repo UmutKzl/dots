@@ -31,7 +31,7 @@ echo "homebrew..."
 brew tap FelixKratz/formulae
 brew tap asmvik/formulae
 
-brew install neovim
+brew install --HEAD neovim
 brew install cava
 brew install docker
 brew install docker-compose
