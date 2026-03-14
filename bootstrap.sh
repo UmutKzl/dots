@@ -21,6 +21,8 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock orientation -string "right"
 
+osascript -e 'tell application "System Events" to tell dock preferences to set autohide menu bar to true'
+
 killall Dock
 killall Finder
 
