@@ -19,6 +19,10 @@ vim.opt.updatetime = 250
 vim.opt.timeoutlen = 400
 -- }}}
 
+-- Startup {{{
+vim.opt.shortmess:append("I")
+-- }}}
+
 -- Search {{{
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
