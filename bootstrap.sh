@@ -20,11 +20,14 @@ defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock orientation -string "right"
+defaults write -g com.apple.trackpad.forceClick -int 0
+defaults write -g com.apple.swipescrolldirection -bool false
 
 osascript -e 'tell application "System Events" to tell dock preferences to set autohide menu bar to true'
 
 killall Dock
 killall Finder
+killall cfprefsd
 
 echo "section ended."
 
@@ -103,7 +106,13 @@ ln -sf ~/dots/zed/* ~/.config/zed/
 
 echo "Installation ended."
 
-echo "TODO"
-echo "Don't forget to disable SIP https://github.com/asmvik/yabai/wiki/Disabling-System-Integrity-Protection"
-echo "Don't forget to configure scripting addition https://github.com/asmvik/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition"
-echo "I recommend you to make your screen resolution as much as possible (if you are in a 13-inch Macbook)"
+echo "-- TODO --"
+echo "- Don't forget to disable SIP https://github.com/asmvik/yabai/wiki/Disabling-System-Integrity-Protection"
+echo "- Don't forget to configure scripting addition https://github.com/asmvik/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition"
+echo "- I recommend you to make your screen resolution as much as possible (if you are in a 13-inch Macbook)"
+echo "- Set up Raycast"
+echo "- Set up Mac Mouse Fix"
+echo "- Set up Brave Browser"
+echo "- Set up Spotify"
+echo "- Set up Rustup"
+echo "- Set up Obsidian"
