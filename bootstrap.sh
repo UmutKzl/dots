@@ -57,6 +57,8 @@ brew install tree-sitter-cli
 brew install hugo
 brew install zellij
 brew install borders
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
 
 brew install --cask brave-browser
 brew install --cask spotify
