@@ -6,7 +6,9 @@ then
   exit 1
 fi
 
-echo "defaults write settings..."
+echo "----------------------------------"
+echo "--- CONFIGURING MACOS DEFAULTS ---"
+echo "----------------------------------"
 
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.dashboard mcx-disabled -bool true
@@ -29,9 +31,9 @@ killall Dock
 killall Finder
 killall cfprefsd
 
-echo "section ended."
-
-echo "homebrew..."
+echo "------------------------------------"
+echo "--- INSTALLING HOMEBREW PACKAGES ---"
+echo "------------------------------------"
 
 brew tap FelixKratz/formulae
 brew tap asmvik/formulae
@@ -72,20 +74,32 @@ brew install --cask raycast
 brew install --cask selfcontrol
 brew install --cask zed
 
-# start colima
+echo "---------------------"
+echo "--- SET UP DOCKER ---"
+echo "---------------------"
+
 colima start
 
-# set wallpaper
+echo "-------------------------"
+echo "--- SETTING WALLPAPER ---"
+echo "-------------------------"
 osascript -e "tell application \"System Events\" to set picture of every desktop to \"/Users/$(whoami)/dots/media/wallpaper.png\""
+
 
 # install oh my zsh
 if ! command -v zsh >/dev/null; then
   brew install zsh
 fi
 
-echo "Installing oh my zsh"
+echo "-----------------"
+echo "--- OH MY ZSH ---"
+echo "-----------------"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+echo "------------------------"
+echo "--- LINKING DOTFILES ---"
+echo "------------------------"
 
 # neovim
 mkdir -p ~/.config/nvim
@@ -117,11 +131,11 @@ ln -sf ~/dots/zellij/config.kdl ~/.config/zellij/config.kdl
 mkdir -p ~/.config/zed
 ln -sf ~/dots/zed/* ~/.config/zed/
 
+echo "-----------------------------"
+echo "--- INSTALLATION FINISHED ---"
+echo "-----------------------------"
 
-
-echo "Installation ended."
-
-echo "-- TODO --"
+echo "-------- TODO --------"
 echo "- Don't forget to disable SIP https://github.com/asmvik/yabai/wiki/Disabling-System-Integrity-Protection"
 echo "- Don't forget to configure scripting addition https://github.com/asmvik/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition"
 echo "- I recommend you to make your screen resolution as much as possible (if you are in a 13-inch Macbook)"
@@ -131,3 +145,5 @@ echo "- Set up Brave Browser"
 echo "- Set up Spotify"
 echo "- Set up Rustup"
 echo "- Set up Obsidian"
+echo
+echo "Good luck with these."
