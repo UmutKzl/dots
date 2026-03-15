@@ -41,6 +41,7 @@ brew install cava
 brew install docker
 brew install docker-compose
 brew install colima
+brew install lazygit
 brew install eza
 brew install python
 brew install rustup
@@ -75,11 +76,23 @@ colima start
 # set wallpaper
 osascript -e "tell application \"System Events\" to set picture of every desktop to \"/Users/$(whoami)/dots/media/wallpaper.png\""
 
+# install oh my zsh
+if ! command -v zsh >/dev/null; then
+  brew install zsh
+fi
+
+echo "Installing oh my zsh"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 # neovim
 mkdir -p ~/.config/nvim
 ln -sf ~/dots/nvim/init.lua ~/.config/nvim/init.lua
 ln -sf ~/dots/nvim/lua ~/.config/nvim/lua
 ln -sf ~/dots/nvim/nvim-pack-lock.json ~/.config/nvim/nvim-pack-lock.json
+
+# zsh
+ln -sf ~/dots/shell/zshrc ~/.zshrc
 
 # kitty
 mkdir -p ~/.config/kitty
