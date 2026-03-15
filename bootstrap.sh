@@ -59,6 +59,7 @@ brew install --cask spotify
 brew install --cask obsidian
 brew install --cask font-iosevka-nerd-font
 brew install --cask font-iosevka-term-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask kitty
 brew install --cask mac-mouse-fix
 brew install --cask raycast
